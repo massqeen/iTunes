@@ -27,6 +27,9 @@ export const musicPlayerInit = () => {
     } else {
       audioPlayer.play();
     }
+    audioPlayer.addEventListener('canplay', () => {
+      updateTime();
+    });
   };
 
   const playTrack = () => {
@@ -80,7 +83,7 @@ export const musicPlayerInit = () => {
     audioPlayer.play();
   };
 
-  const TimeUpdate = () => {
+  const updateTime = () => {
     const currentTime = audioPlayer.currentTime,
       duration = audioPlayer.duration;
     let minutesPassed = Math.floor(currentTime / 60) || '0',
@@ -126,7 +129,7 @@ export const musicPlayerInit = () => {
 
   audioNavigation.addEventListener('click', clickNavigationHandler);
   audioPlayer.addEventListener('ended', nextTrackOnEnd);
-  audioPlayer.addEventListener('timeupdate', TimeUpdate);
+  audioPlayer.addEventListener('timeupdate', updateTime);
   audioProgress.addEventListener('click', audioProgressUpdate);
   audioVolume.addEventListener('input', audioVolumeUpdate);
   audioVolumeIcon.addEventListener('click', audioVolumeClickHandler);

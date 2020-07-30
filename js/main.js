@@ -31,3 +31,11 @@ playerBtn.forEach((btn, i) => {
 radioPlayerInit();
 videoPlayerInit();
 musicPlayerInit();
+
+//getting list of files from audio folder NODE.JS
+// const fs = require('fs');
+// const audioPath = './audio';
+// fs.readdir(audioPath,(err,files)=>{
+//   files.forEach((file)=>{
+//     console.log(file);})
+// })
