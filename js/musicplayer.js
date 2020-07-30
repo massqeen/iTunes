@@ -115,6 +115,14 @@ export const musicPlayerInit = () => {
     audioVolumeIcon.classList.remove('fa-volume-off');
   };
 
+  musicPlayerInit.pause = () => {
+    if (!audioPlayer.paused) {
+      audioPlayer.pause();
+      audio.classList.remove('play');
+      audioBtnPlay.classList.remove('fa-pause');
+      audioBtnPlay.classList.add('fa-play');
+    }
+  };
 
   audioNavigation.addEventListener('click', clickNavigationHandler);
   audioPlayer.addEventListener('ended', nextTrackOnEnd);

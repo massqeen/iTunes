@@ -12,6 +12,9 @@ const deactivateTempHeader = () =>
 const deactivateTabs = () => {
   playerBlock.forEach((item) => item.classList.remove('active'));
   playerBtn.forEach((item) => item.classList.remove('active'));
+  musicPlayerInit.pause();
+  radioPlayerInit.pause();
+  videoPlayerInit.pause();
 };
 
 const playerBtnClickHandler = (btn, i) => {

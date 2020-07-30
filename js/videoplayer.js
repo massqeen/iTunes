@@ -1,4 +1,4 @@
-import {addZero} from './support.js';
+import { addZero } from './support.js';
 
 export const videoPlayerInit = () => {
   const videoBtnPlay = document.querySelector('.video-button__play'),
@@ -70,6 +70,9 @@ export const videoPlayerInit = () => {
     videoVolumeIcon.classList.add('fa-volume-up');
     videoVolumeIcon.classList.remove('fa-volume-off');
   };
+
+  videoPlayerInit.pause = () => videoPlayer.pause();
+
 
   videoBtnPlay.addEventListener('click', videoClickHandler);
   videoBtnStop.addEventListener('click', stopClickHandler);

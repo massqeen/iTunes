@@ -68,6 +68,13 @@ export const radioPlayerInit = () => {
     radioVolumeIcon.classList.remove('fa-volume-off');
   };
 
+  radioPlayerInit.pause = () => {
+    radio.pause();
+    radioPlayer.classList.remove('play');
+    radioStop.classList.remove('fa-stop');
+    radioStop.classList.add('fa-play');
+  };
+
   radioNavigation.addEventListener('change', radioClickHandler);
   radioStop.addEventListener('click', stopClickHandler);
   radioVolume.addEventListener('input', radioVolumeUpdate);
