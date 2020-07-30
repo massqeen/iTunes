@@ -2,7 +2,8 @@ import { radioPlayerInit } from './radioplayer.js';
 import { videoPlayerInit } from './videoplayer.js';
 import { musicPlayerInit } from './musicplayer.js';
 
-const playerBlock = document.querySelectorAll('.player-block'),
+const playerAudio = document.querySelector('.player-audio'),
+  playerBlock = document.querySelectorAll('.player-block'),
   playerBtn = document.querySelectorAll('.player-btn');
 
 const deactivateTempHeader = () =>
