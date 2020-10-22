@@ -1,3 +1,8 @@
-# JS study project
+# JS media player "ЯTunes" - video, audio, radio
 
-ЯTunes
+## JS studying project. 
+Multimedia (video, audio, radio), playback and volume controls, tabs.
+Site link - https://massqeen.github.io/iTunes/
+
+
+
